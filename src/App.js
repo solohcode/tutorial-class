@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import FirstComp from "./pages/firstComp";
+import SecondComponent from "./pages/secondComp";
+import Test from "./test";
 
-function App() {
+
+function App(props) {
+  const obj = {name: 'latifah',role: 'frontend'}
+  const exp = 5
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SecondComponent />
+      {/* <h1>hello world </h1> */}
+      {/* <Test men='' /> */}
+      {/* <FirstComp experience={exp} person={obj} /> */}
     </div>
   );
 }
