@@ -1,17 +1,23 @@
-import FirstComp from "./pages/firstComp";
+import HomePage from "./pages/Home";
+import Layout from "./pages/Layout";
 import SecondComponent from "./pages/secondComp";
-import Test from "./test";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import NavBar from "./pages/NavBar";
 
 
-function App(props) {
-  const obj = {name: 'latifah',role: 'frontend'}
-  const exp = 5
+function App() {
   return (
     <div className="App">
-      <SecondComponent />
-      {/* <h1>hello world </h1> */}
-      {/* <Test men='' /> */}
-      {/* <FirstComp experience={exp} person={obj} /> */}
+      <BrowserRouter>
+        <div className="mb-5">
+          <NavBar />
+        </div>
+        <Routes>
+          <Route path="/" element={<Layout />} />
+          <Route path="/about" element={<HomePage />} />
+          <Route path="/login" element={<SecondComponent />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

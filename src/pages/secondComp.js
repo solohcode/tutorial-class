@@ -38,10 +38,12 @@ class SecondComponent extends Component {
                         <label htmlFor="exampleFormControlTextarea1" className="form-label">Password</label>
                         <input onChange={handleChange} type="password" name='password' className="form-control" id="exampleFormControlTextarea1" rows="3" />
                     </div>
-                    <div>
-                        <button className='btn btn-primary w-75 text-center' onClick={handleSubmit}>Submit</button>
+                    <div className='w-75 mx-auto'>
+                        <button className='btn btn-primary w-100' onClick={handleSubmit}>Submit</button>
                     </div>
                 </div>
+
+                {/* <h1>https://github.com/solomon-ayodele65/tutorial-class</h1> */}
                 <div className={`my-5 w-100 bg-primary p-5 text-center text-white ${display?'d-block':'d-none'}`}>
                     <h5 className='text-white'>USER DATA</h5>
                     <p className='text-white'>Welcome User {email}</p>
